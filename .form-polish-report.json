@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten ohne numerische oder Preis-Felder — keine Berechnung möglich"
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": ["kilometerstand"],
+      "computed_keys": [],
+      "reason": "Technische Stammdaten mit Telemetrie; keine Preis-Applookups oder Multiplikations-Ketten"
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["status", "wunschtermin"],
+      "computed_keys": [],
+      "reason": "Workflow-Entity mit Status-Pipeline und Termine; keine numerischen Beträge berechenbar"
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "mwst_satz", "status_rechnung"],
+      "computed_keys": ["mwst_betrag", "_gesamt_betrag"],
+      "reason": "Finanz-Entity mit Netto-Brutto-Aufteilung — MwSt.-Satz lookup → MODUS-2 für satzabhängige Berechnung, dann MODUS-1 für Gesamt"
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Termin-Planungs-Workflow ohne numerische oder Preis-Felder"
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Read-only Workflow aus bestehender Rechnung — Werte aus Applookup geprefüllt, keine Eigenrechnung"
+    }
+  }
+}
