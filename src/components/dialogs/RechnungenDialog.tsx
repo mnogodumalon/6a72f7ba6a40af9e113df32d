@@ -384,7 +384,7 @@ export function RechnungenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="rechnungsnummer">Rechnungsnummer <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="rechnungsnummer"
-          placeholder="z. B. RE-2026-001"
+          placeholder=""
           value={fields.rechnungsnummer ?? ''}
           onChange={e => setFields(f => ({ ...f, rechnungsnummer: e.target.value }))}
           required
@@ -399,7 +399,7 @@ export function RechnungenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="auftrag">Auftrag <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="auftrag"
-          placeholder="Welcher Auftrag?"
+          placeholder=""
           items={auftraegeListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.auftragsnummer ?? r.record_id),
@@ -421,7 +421,7 @@ export function RechnungenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="kunde">Kunde <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="kunde"
-          placeholder="Welcher Kunde?"
+          placeholder=""
           items={kundenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.vorname ?? r.record_id),
@@ -446,7 +446,7 @@ export function RechnungenDialog({ open, onClose, onSubmit, defaultValues, recor
           type="number"
           step="any"
           {...numberInputProps(formEnhancements, 'nettobetrag')}
-          placeholder="z. B. 500,00"
+          placeholder=""
           value={fields.nettobetrag !== undefined ? fields.nettobetrag : (computedValues['nettobetrag'] ?? '')}
           onChange={e => setFields(f => ({ ...f, nettobetrag: clampNumberValue(formEnhancements, 'nettobetrag', e.target.value) }))}
         />
@@ -512,7 +512,7 @@ export function RechnungenDialog({ open, onClose, onSubmit, defaultValues, recor
           type="number"
           step="any"
           {...numberInputProps(formEnhancements, 'bruttobetrag')}
-          placeholder="z. B. 595,00"
+          placeholder=""
           value={fields.bruttobetrag !== undefined ? fields.bruttobetrag : (computedValues['bruttobetrag'] ?? '')}
           onChange={e => setFields(f => ({ ...f, bruttobetrag: clampNumberValue(formEnhancements, 'bruttobetrag', e.target.value) }))}
         />
@@ -526,7 +526,7 @@ export function RechnungenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="rechnungsdatum">Rechnungsdatum <span className="text-destructive" aria-hidden="true">*</span></Label>
         <DatePicker
           id="rechnungsdatum"
-          placeholder="Wann wurde abgerechnet?"
+          placeholder=""
           mode="date"
           value={fields.rechnungsdatum ?? null}
           onChange={v => setFields(f => ({ ...f, rechnungsdatum: v ?? undefined }))}
@@ -542,7 +542,7 @@ export function RechnungenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="faelligkeitsdatum">Fälligkeitsdatum <span className="text-destructive" aria-hidden="true">*</span></Label>
         <DatePicker
           id="faelligkeitsdatum"
-          placeholder="Zahlungsfrist?"
+          placeholder=""
           mode="date"
           value={fields.faelligkeitsdatum ?? null}
           onChange={v => setFields(f => ({ ...f, faelligkeitsdatum: v ?? undefined }))}

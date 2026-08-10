@@ -342,7 +342,7 @@ export function RechnungsPdfErstellenDialog({ open, onClose, onSubmit, defaultVa
         <Label htmlFor="rechnung">Rechnung <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="rechnung"
-          placeholder="Welche Rechnung als PDF?"
+          placeholder=""
           items={rechnungenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.rechnungsnummer ?? r.record_id),
@@ -364,7 +364,7 @@ export function RechnungsPdfErstellenDialog({ open, onClose, onSubmit, defaultVa
         <Label htmlFor="pdf_rechnungsnummer">Rechnungsnummer <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="pdf_rechnungsnummer"
-          placeholder="z. B. RE-2026-001"
+          placeholder=""
           value={fields.pdf_rechnungsnummer ?? ''}
           onChange={e => setFields(f => ({ ...f, pdf_rechnungsnummer: e.target.value }))}
           required
@@ -379,7 +379,7 @@ export function RechnungsPdfErstellenDialog({ open, onClose, onSubmit, defaultVa
         <Label htmlFor="pdf_kunde_vorname">Vorname des Kunden <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="pdf_kunde_vorname"
-          placeholder="z. B. Max"
+          placeholder=""
           value={fields.pdf_kunde_vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, pdf_kunde_vorname: e.target.value }))}
           required
@@ -394,7 +394,7 @@ export function RechnungsPdfErstellenDialog({ open, onClose, onSubmit, defaultVa
         <Label htmlFor="pdf_kunde_nachname">Nachname des Kunden <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="pdf_kunde_nachname"
-          placeholder="z. B. Mustermann"
+          placeholder=""
           value={fields.pdf_kunde_nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, pdf_kunde_nachname: e.target.value }))}
           required
@@ -412,7 +412,7 @@ export function RechnungsPdfErstellenDialog({ open, onClose, onSubmit, defaultVa
           type="number"
           step="any"
           {...numberInputProps(formEnhancements, 'pdf_nettobetrag')}
-          placeholder="z. B. 500,00"
+          placeholder=""
           value={fields.pdf_nettobetrag !== undefined ? fields.pdf_nettobetrag : (computedValues['pdf_nettobetrag'] ?? '')}
           onChange={e => setFields(f => ({ ...f, pdf_nettobetrag: clampNumberValue(formEnhancements, 'pdf_nettobetrag', e.target.value) }))}
         />
@@ -429,7 +429,7 @@ export function RechnungsPdfErstellenDialog({ open, onClose, onSubmit, defaultVa
           type="number"
           step="any"
           {...numberInputProps(formEnhancements, 'pdf_bruttobetrag')}
-          placeholder="z. B. 595,00"
+          placeholder=""
           value={fields.pdf_bruttobetrag !== undefined ? fields.pdf_bruttobetrag : (computedValues['pdf_bruttobetrag'] ?? '')}
           onChange={e => setFields(f => ({ ...f, pdf_bruttobetrag: clampNumberValue(formEnhancements, 'pdf_bruttobetrag', e.target.value) }))}
         />

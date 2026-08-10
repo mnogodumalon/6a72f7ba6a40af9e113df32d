@@ -374,7 +374,7 @@ export function AuftraegeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="fahrzeug">Fahrzeug <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="fahrzeug"
-          placeholder="Welches Fahrzeug?"
+          placeholder=""
           items={fahrzeugeListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.kennzeichen ?? r.record_id),
@@ -396,7 +396,7 @@ export function AuftraegeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="kunde">Kunde <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="kunde"
-          placeholder="Welcher Kunde?"
+          placeholder=""
           items={kundenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.vorname ?? r.record_id),
@@ -418,7 +418,7 @@ export function AuftraegeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="arbeitsbeschreibung">Arbeitsbeschreibung <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Textarea
           id="arbeitsbeschreibung"
-          placeholder="Was soll repariert oder gewartet werden? Mängel, Fehler, gewünschte Arbeiten..."
+          placeholder=""
           value={fields.arbeitsbeschreibung ?? ''}
           onChange={e => setFields(f => ({ ...f, arbeitsbeschreibung: e.target.value }))}
           rows={3}
@@ -433,7 +433,7 @@ export function AuftraegeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="wunschtermin">Wunschtermin</Label>
         <DatePicker
           id="wunschtermin"
-          placeholder="Wann soll die Arbeit erfolgen?"
+          placeholder=""
           mode="datetime"
           value={fields.wunschtermin ?? null}
           onChange={v => setFields(f => ({ ...f, wunschtermin: v ?? undefined }))}
@@ -540,7 +540,7 @@ export function AuftraegeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="bemerkungen_auftrag">Bemerkungen</Label>
         <Textarea
           id="bemerkungen_auftrag"
-          placeholder="Besonderheiten, Vorzüge, Kundenwünsche..."
+          placeholder=""
           value={fields.bemerkungen_auftrag ?? ''}
           onChange={e => setFields(f => ({ ...f, bemerkungen_auftrag: e.target.value }))}
           rows={3}
@@ -552,7 +552,7 @@ export function AuftraegeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="auftragsnummer">Auftragsnummer <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="auftragsnummer"
-          placeholder="z. B. AU-2026-001"
+          placeholder=""
           value={fields.auftragsnummer ?? ''}
           onChange={e => setFields(f => ({ ...f, auftragsnummer: e.target.value }))}
           required

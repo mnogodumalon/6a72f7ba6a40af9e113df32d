@@ -332,7 +332,7 @@ export function FahrzeugeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="kennzeichen">Kennzeichen <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="kennzeichen"
-          placeholder="z. B. B-AB-1234"
+          placeholder=""
           value={fields.kennzeichen ?? ''}
           onChange={e => setFields(f => ({ ...f, kennzeichen: e.target.value }))}
           required
@@ -347,7 +347,7 @@ export function FahrzeugeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="marke">Marke <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="marke"
-          placeholder="z. B. Volkswagen"
+          placeholder=""
           value={fields.marke ?? ''}
           onChange={e => setFields(f => ({ ...f, marke: e.target.value }))}
           required
@@ -362,7 +362,7 @@ export function FahrzeugeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="modell">Modell <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="modell"
-          placeholder="z. B. Golf"
+          placeholder=""
           value={fields.modell ?? ''}
           onChange={e => setFields(f => ({ ...f, modell: e.target.value }))}
           required
@@ -380,7 +380,7 @@ export function FahrzeugeDialog({ open, onClose, onSubmit, defaultValues, record
           type="number"
           step="any"
           {...numberInputProps(formEnhancements, 'baujahr')}
-          placeholder="z. B. 2020"
+          placeholder=""
           value={fields.baujahr !== undefined ? fields.baujahr : (computedValues['baujahr'] ?? '')}
           onChange={e => setFields(f => ({ ...f, baujahr: clampNumberValue(formEnhancements, 'baujahr', e.target.value) }))}
         />
@@ -391,7 +391,7 @@ export function FahrzeugeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="fin">Fahrzeugidentifikationsnummer (FIN)</Label>
         <Input
           id="fin"
-          placeholder="z. B. WVWZZZ3CZ9E123456"
+          placeholder=""
           value={fields.fin ?? ''}
           onChange={e => setFields(f => ({ ...f, fin: e.target.value }))}
         />
@@ -405,7 +405,7 @@ export function FahrzeugeDialog({ open, onClose, onSubmit, defaultValues, record
           type="number"
           step="any"
           {...numberInputProps(formEnhancements, 'kilometerstand')}
-          placeholder="z. B. 45000"
+          placeholder=""
           value={fields.kilometerstand !== undefined ? fields.kilometerstand : (computedValues['kilometerstand'] ?? '')}
           onChange={e => setFields(f => ({ ...f, kilometerstand: clampNumberValue(formEnhancements, 'kilometerstand', e.target.value) }))}
         />
@@ -416,7 +416,7 @@ export function FahrzeugeDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="kunde">Kunde <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="kunde"
-          placeholder="Kunde wählen"
+          placeholder=""
           items={kundenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.vorname ?? r.record_id),

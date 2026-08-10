@@ -333,7 +333,7 @@ export function JahresinspektionPlanenDialog({ open, onClose, onSubmit, defaultV
         <Label htmlFor="fahrzeug">Fahrzeug <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="fahrzeug"
-          placeholder="Welches Fahrzeug kommt zur HU?"
+          placeholder=""
           items={fahrzeugeListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.kennzeichen ?? r.record_id),
@@ -355,7 +355,7 @@ export function JahresinspektionPlanenDialog({ open, onClose, onSubmit, defaultV
         <Label htmlFor="wunschtermin_inspektion">Wunschtermin <span className="text-destructive" aria-hidden="true">*</span></Label>
         <DatePicker
           id="wunschtermin_inspektion"
-          placeholder="Wann sollte die Inspektion stattfinden?"
+          placeholder=""
           mode="datetime"
           value={fields.wunschtermin_inspektion ?? null}
           onChange={v => setFields(f => ({ ...f, wunschtermin_inspektion: v ?? undefined }))}
@@ -371,7 +371,7 @@ export function JahresinspektionPlanenDialog({ open, onClose, onSubmit, defaultV
         <Label htmlFor="arbeitsbeschreibung_inspektion">Arbeitsbeschreibung <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Textarea
           id="arbeitsbeschreibung_inspektion"
-          placeholder="Was wird bei der Inspektion überprüft? Punkte, Schwerpunkte..."
+          placeholder=""
           value={fields.arbeitsbeschreibung_inspektion ?? ''}
           onChange={e => setFields(f => ({ ...f, arbeitsbeschreibung_inspektion: e.target.value }))}
           rows={3}
@@ -386,7 +386,7 @@ export function JahresinspektionPlanenDialog({ open, onClose, onSubmit, defaultV
         <Label htmlFor="bemerkungen_inspektion">Bemerkungen</Label>
         <Textarea
           id="bemerkungen_inspektion"
-          placeholder="Spezielle Anmerkungen, Vorarbeiten nötig?..."
+          placeholder=""
           value={fields.bemerkungen_inspektion ?? ''}
           onChange={e => setFields(f => ({ ...f, bemerkungen_inspektion: e.target.value }))}
           rows={3}
