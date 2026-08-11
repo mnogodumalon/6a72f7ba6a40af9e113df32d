@@ -20,6 +20,7 @@
 import type { ComponentType } from 'react';
 
 // <custom:intent-imports>
+import { IconClipboardPlus, IconCheckbox, IconCalendarEvent } from '@tabler/icons-react';
 // </custom:intent-imports>
 
 export interface IntentLink {
@@ -42,6 +43,9 @@ export interface IntentLink {
 
 export const INTENTS: IntentLink[] = [
   // <custom:intents>
+  { path: '/intents/neuer-auftrag', label: { de: 'Neuer Auftrag', en: 'New Order' }, icon: IconClipboardPlus, description: 'Auftrag in 3 Schritten anlegen' },
+  { path: '/intents/auftrag-abschliessen', label: { de: 'Auftrag abschließen', en: 'Close Order' }, icon: IconCheckbox, description: 'Auftrag abschließen und Rechnung erstellen' },
+  { path: '/intents/jahresinspektion-planen', label: { de: 'Inspektion planen', en: 'Plan Inspection' }, icon: IconCalendarEvent, description: 'Jahresinspektion für Fahrzeug terminieren' },
   // </custom:intents>
 ];
 
@@ -52,4 +56,4 @@ export const INTENTS: IntentLink[] = [
  * purpose — a scaffold update resets it to false (self-healing if Phase 2
  * never ran).
  */
-export const INTENTS_PENDING = true;
+export const INTENTS_PENDING = false;
