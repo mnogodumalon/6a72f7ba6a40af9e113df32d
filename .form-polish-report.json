@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity (Kontakt, Adresse). Keine Numerik, keine Applookup-Preis-Targets, keine Datumspaare. Nichts berechenbar."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeug-Registrierung mit Basisdaten und Kilometrage. Applookup auf Kunden ohne Preis-Target. Keine Berechnungen nötig."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["wunschtermin", "status", "prioritaet"],
+      "computed_keys": [],
+      "reason": "Workflow-Entity mit Lookup-Status und Termin. Keine Kostenrechnung, keine numerischen Applookup-Ziele. Status='offen', Priorität='normal' als Defaults, Termin=heute."
+    },
+    "Rechnungen": {
+      "placeholders_set": 8,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung", "mwst_satz"],
+      "computed_keys": ["_mwst_betrag", "bruttobetrag"],
+      "reason": "Klassische Netto-Brutto-Rechnung. Mwst-Satz als Lookup (19%/7%/0%) → MODUS-2 Funktion für Satz-Extraktion. Brutto = Netto + (Netto × Satz). Fälligkeitsdatum +14 Tage."
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Terminplanung ohne Kostenlogik. Nur Applookup+Textfelder+Datum. Wunschtermin +7 Tage voraus."
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Hilfstool-Dialog mit Rechnung-Applookup und prefill-Felder. Keine echten Berechnungen, nur Daten-Copy-through."
+    }
+  }
+}
