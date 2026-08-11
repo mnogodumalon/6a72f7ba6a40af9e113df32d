@@ -1,0 +1,57 @@
+{
+  "KundenDialog.tsx": {
+    "vorname": "z. B. Hans",
+    "nachname": "z. B. Müller",
+    "email": "z. B. hans@example.com",
+    "strasse": "z. B. Hauptstraße",
+    "hausnummer": "z. B. 42",
+    "plz": "z. B. 10115",
+    "ort": "z. B. Berlin",
+    "telefon": "z. B. 030 123456",
+    "bemerkungen_kunde": "Kundenhistorie, besondere Wünsche, Zahlungskonditionen..."
+  },
+  "FahrzeugeDialog.tsx": {
+    "kennzeichen": "z. B. B-HM 1234",
+    "marke": "z. B. BMW",
+    "modell": "z. B. 3er Limousine",
+    "baujahr": "z. B. 2020",
+    "fin": "z. B. WBXYZ1234567890",
+    "kilometerstand": "z. B. 45000",
+    "kunde": "Fahrzeughalter wählen"
+  },
+  "AuftraegeDialog.tsx": {
+    "auftragsnummer": "z. B. AU-2026-001",
+    "fahrzeug": "Welches Fahrzeug?",
+    "kunde": "Welcher Kunde?",
+    "status": "z. B. Offen, In Bearbeitung, Abgeschlossen",
+    "prioritaet": "z. B. Niedrig, Normal, Hoch",
+    "wunschtermin": "Wann soll das Fahrzeug in der Werkstatt sein?",
+    "arbeitsbeschreibung": "Was genau muss repariert/gewartet werden? Beschwerden des Kunden, Symptome...",
+    "bemerkungen_auftrag": "Zusätzliche Notizen, Besonderheiten, Material-Wünsche..."
+  },
+  "RechnungenDialog.tsx": {
+    "rechnungsnummer": "z. B. RG-2026-042",
+    "auftrag": "Welcher Auftrag wird abgerechnet?",
+    "kunde": "Rechnungsempfänger wählen",
+    "nettobetrag": "z. B. 500,00",
+    "mwst_satz": "z. B. 19%, 7%, oder 0%",
+    "bruttobetrag": "z. B. 595,00",
+    "rechnungsdatum": "Wann wurde die Rechnung ausgestellt?",
+    "faelligkeitsdatum": "Zahlbar bis wann?",
+    "status_rechnung": "z. B. Offen, Bezahlt, Überfällig"
+  },
+  "JahresinspektionPlanenDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug inspizieren?",
+    "wunschtermin_inspektion": "Wann soll die Inspektion stattfinden?",
+    "arbeitsbeschreibung_inspektion": "Was ist bei der Inspektion zu prüfen? Inspektions-Checkliste, Schwerpunkte...",
+    "bemerkungen_inspektion": "Besonderheiten, Kundenhinweise, Vorbedingungen..."
+  },
+  "RechnungsPdfErstellenDialog.tsx": {
+    "rechnung": "Welche Rechnung soll als PDF erstellt werden?",
+    "pdf_rechnungsnummer": "z. B. RG-2026-042",
+    "pdf_kunde_vorname": "z. B. Hans",
+    "pdf_kunde_nachname": "z. B. Müller",
+    "pdf_nettobetrag": "z. B. 500,00",
+    "pdf_bruttobetrag": "z. B. 595,00"
+  }
+}

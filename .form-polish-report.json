@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Kundenstammdaten (Name, Adresse, Kontakt, Bemerkungen). Keine Datumsfelder, keine numerischen oder preisbezogenen Felder, keine applookup-Ziele mit Preisen — daher keine berechneten Felder möglich."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeug-Katalog mit Metadaten (Kennzeichen, Marke, Modell, Baujahr, FIN, Kilometerstand). Applookup auf Kunden hat keine Preisfelder — keine Berechnungsgrundlage vorhanden."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["status"],
+      "computed_keys": [],
+      "reason": "Auftragsmanagement mit Fahrzeug+Kunde-Kontexten und Workflow-Status. Zwei applookups ohne Preis-Fields, kein Datumspaar für Dauer-Berechnung, keine numerischen Felder mit Beziehungen — Workflow, keine Kostenrechnung."
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung", "mwst_satz"],
+      "computed_keys": ["_mwst_betrag", "bruttobetrag"],
+      "reason": "Rechnungs-Entität mit klarer Netto-Brutto-Struktur. Nettobetrag vorhanden, MwSt-Satz-Lookup (19%/7%/0%), Bruttobetrag als Feld: MODUS-2-Funktion zur MwSt-Berechnung (abhängig vom Lookup-Key). Bruttobetrag = Netto + MwSt-Betrag. Daten-Defaults: Rechnungsdatum=heute, Fälligkeitsdatum=heute+14 Tage, Status=Offen, MwSt-Satz=19% als Standard."
+    },
+    "JahresinspektionPlanen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektions-Planungs-Formular mit Fahrzeug + Wunschtermin (datetime). Applookup ohne Preisfelder, keine numerischen Relationen. Wunschtermin-Default=heute mit withTime:true (für datetimeminute-Feld erforderlich)."
+    },
+    "RechnungsPdfErstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "PDF-Generierungs-Workflow: Rechnung-Applookup (mit Netto-/Bruttobetrag-Fields) + vier Vorbelegungs-Texte + zwei reine Anzeigefelder (pdf_nettobetrag, pdf_bruttobetrag). Applookup lädt die Beträge, keine echte Berechnung nötig — User sieht Kopien der Rechnungsdaten im Dialog."
+    }
+  }
+}
