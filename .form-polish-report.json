@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdatenverwaltung (Kontaktinformationen). Keine Numerik, keine Preise, keine Daten-Abhängigkeiten. Address-Pair für fieldOrder optimiert."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeugdaten ohne Preisberechnung. Baujahr und Kilometerstand sind reine Stammdaten. Applookup auf Kunden hat kein Preis-Target."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["status"],
+      "computed_keys": [],
+      "reason": "Arbeitsbeschreibung + Status/Priorität ohne Preisberechnung. Ein Datumfeld ohne Enddatum (keine Dauer-Berechnung möglich). Status defaulting auf 'offen'."
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung"],
+      "computed_keys": ["mwst_betrag", "bruttobetrag"],
+      "reason": "Klassische Netto-Brutto-Rechnung mit Lookup-basiertem MwSt-Satz (19%/7%/0%). MODUS-2 für Satzauswahl (satzKey switch). Rechnungsdatum=heute, Fälligkeitsdatum=+14 Tage, Status=offen."
+    },
+    "JahresinspektionPlanen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektionsplan ohne Preisberechnung. Ein Datumfeld mit datetimeminute-Type (withTime: true). Defaulting auf +7 Tage für zukünftige Terminierung."
+    },
+    "RechnungsPdfErstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Prefill-Dialog für PDF-Export. Felder sind Anzeige-/Kopier-Felder aus der Rechnung, keine Berechnung nötig."
+    }
+  }
+}

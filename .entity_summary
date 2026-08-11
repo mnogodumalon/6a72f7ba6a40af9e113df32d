@@ -1,0 +1,40 @@
+Legend: `!` after a field name = required (from the app's base view) —
+a step form that writes such a field must not submit it empty.
+A lookup field lists its keys after the type (`[lookup/select: a|b|c]`);
+these are the ONLY valid write values — quote them into the brief verbatim,
+the matching labels come from LOOKUP_OPTIONS at runtime.
+`⚙` lists the service methods for that entity, spelled exactly.
+
+Modules — copy these paths verbatim into a subagent brief:
+  @/types/app                            entity types, APP_IDS, LOOKUP_OPTIONS
+  @/types/enriched                       EnrichedFahrzeuge, EnrichedAuftraege, EnrichedRechnungen, EnrichedJahresinspektionPlanen, EnrichedRechnungsPdfErstellen — the COMPLETE list, no other Enriched* type exists
+  @/services/livingAppsService           LivingAppsService, createRecordUrl, extractRecordId
+  @/hooks/useDashboardData               useDashboardData
+  @/lib/formatters                       lookupKey, formatDate
+  @/components/blocks/IntentWizardShell  IntentWizardShell
+  @/components/blocks/EntitySelectStep   EntitySelectStep
+  @/components/blocks/StatusBadge        StatusBadge, getStatusColor
+  @/components/blocks/BudgetTracker      BudgetTracker
+There is NO `@/config/appIds`, no `@/config/lookupOptions` and no
+`@/lib/urlUtils` — APP_IDS and LOOKUP_OPTIONS come from `@/types/app`,
+createRecordUrl from the service. Note the lowercase `l` in the service path.
+
+- Kunden (kunden): vorname![string/text], nachname![string/text], email[string/email], telefon[string/tel], strasse[string/text], hausnummer[string/text], plz[string/text], ort[string/text], bemerkungen_kunde[string/textarea]
+  ⚙ getKunden() · getKundenEntry(id) · createKundenEntry(fields) · updateKundenEntry(id, fields) · deleteKundenEntry(id)
+- Fahrzeuge (fahrzeuge): kennzeichen![string/text], marke![string/text], modell![string/text], baujahr[number], fin[string/text], kilometerstand[number], kunde![applookup/select]
+  ⚙ getFahrzeuge() · getFahrzeugeEntry(id) · createFahrzeugeEntry(fields) · updateFahrzeugeEntry(id, fields) · deleteFahrzeugeEntry(id)
+  → kunde links to app_id 6a72f781de936e1d254dc6ed
+- Aufträge (auftraege): fahrzeug![applookup/select], kunde![applookup/select], arbeitsbeschreibung![string/textarea], wunschtermin[date/datetimeminute], status![lookup/select: offen|in_bearbeitung|abgeschlossen], prioritaet[lookup/radio: niedrig|normal|hoch], bemerkungen_auftrag[string/textarea], auftragsnummer![string/text]
+  ⚙ getAuftraege() · getAuftraegeEntry(id) · createAuftraegeEntry(fields) · updateAuftraegeEntry(id, fields) · deleteAuftraegeEntry(id)
+  → fahrzeug links to app_id 6a72f788338628c33dae785b
+  → kunde links to app_id 6a72f781de936e1d254dc6ed
+- Rechnungen (rechnungen): rechnungsnummer![string/text], auftrag![applookup/select], kunde![applookup/select], nettobetrag![number], mwst_satz![lookup/radio: mwst_19|mwst_7|mwst_0], bruttobetrag![number], rechnungsdatum![date/date], faelligkeitsdatum![date/date], status_rechnung![lookup/select: offen|bezahlt|ueberfaellig], pdf_anhang[file]
+  ⚙ getRechnungen() · getRechnungenEntry(id) · createRechnungenEntry(fields) · updateRechnungenEntry(id, fields) · deleteRechnungenEntry(id)
+  → auftrag links to app_id 6a72f7889aafee219a9f50a8
+  → kunde links to app_id 6a72f781de936e1d254dc6ed
+- Jahresinspektion planen (jahresinspektion_planen): fahrzeug![applookup/select], wunschtermin_inspektion![date/datetimeminute], arbeitsbeschreibung_inspektion![string/textarea], bemerkungen_inspektion[string/textarea]
+  ⚙ getJahresinspektionPlanen() · getJahresinspektionPlanenEntry(id) · createJahresinspektionPlanenEntry(fields) · updateJahresinspektionPlanenEntry(id, fields) · deleteJahresinspektionPlanenEntry(id)
+  → fahrzeug links to app_id 6a72f788338628c33dae785b
+- Rechnungs-PDF erstellen (rechnungs_pdf_erstellen): rechnung![applookup/select], pdf_rechnungsnummer![string/text], pdf_kunde_vorname![string/text], pdf_kunde_nachname![string/text], pdf_nettobetrag![number], pdf_bruttobetrag![number], pdf_datei![file]
+  ⚙ getRechnungsPdfErstellen() · getRechnungsPdfErstellenEntry(id) · createRechnungsPdfErstellenEntry(fields) · updateRechnungsPdfErstellenEntry(id, fields) · deleteRechnungsPdfErstellenEntry(id)
+  → rechnung links to app_id 6a72f7897299d4ffe60e7b38
