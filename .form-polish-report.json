@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Adresse, Kontakt). Keine Number-Felder, keine applookup-Targets mit Preis. Keine Berechnungen sinnvoll."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeug-Inventar mit Number-Feldern (Baujahr, Kilometerstand), aber keine Preis-Targets und keine berechenbaren Relationen. Keine Berechnungen sinnvoll."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["wunschtermin", "status"],
+      "computed_keys": [],
+      "reason": "Auftrags-Erfassung ohne Kosten. Status hat Default 'offen', Wunschtermin defaults auf today mit withTime. Keine Number-Felder und keine Berechnungen nötig."
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "mwst_satz", "status_rechnung"],
+      "computed_keys": ["_mwst_betrag", "bruttobetrag"],
+      "reason": "Netto-Brutto-Rechnung mit explizitem MwSt-Satz-Lookup. Bruttobetrag = Netto × (1 + MwSt-Satz conditional auf key). Zusätzlich virtueller _mwst_betrag für Übersicht. MwSt-Satz defaults auf 19% (Standard)."
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Termin-Planungs-Form für Inspektionen. Nur Wunschtermin defaults auf today mit withTime. Keine Number-Felder, keine Berechnungen."
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Vorbelegungs-Formular für PDF-Export. Felder sind Eingaben aus Rechnung (Lookup), nicht berechenbar. Keine Berechnungen sinnvoll."
+    }
+  }
+}

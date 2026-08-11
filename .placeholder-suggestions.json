@@ -1,0 +1,57 @@
+{
+  "KundenDialog.tsx": {
+    "vorname": "z. B. Max",
+    "nachname": "z. B. Müller",
+    "email": "z. B. max@example.com",
+    "telefon": "z. B. +49 30 12345678",
+    "strasse": "z. B. Hauptstraße",
+    "hausnummer": "z. B. 42",
+    "plz": "z. B. 10115",
+    "ort": "z. B. Berlin",
+    "bemerkungen_kunde": "Besonderheiten, bevorzugte Kontaktzeit, Zahlungsbedingungen..."
+  },
+  "FahrzeugeDialog.tsx": {
+    "kennzeichen": "z. B. B-AB-1234",
+    "marke": "z. B. BMW",
+    "modell": "z. B. 3er Serie",
+    "baujahr": "z. B. 2020",
+    "fin": "z. B. WBADT43452G123456",
+    "kilometerstand": "z. B. 45000",
+    "kunde": "Fahrzeughalter wählen"
+  },
+  "AuftraegeDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug?",
+    "kunde": "Welcher Kunde?",
+    "auftragsnummer": "z. B. AU-2026-001",
+    "arbeitsbeschreibung": "Was soll repariert oder gewartet werden?",
+    "wunschtermin": "Gewünschter Termin?",
+    "status": "z. B. Offen, In Bearbeitung",
+    "prioritaet": "z. B. Hoch, Normal, Niedrig",
+    "bemerkungen_auftrag": "Spezielle Anweisungen, Teile bereitstellen, Besonderheiten..."
+  },
+  "RechnungenDialog.tsx": {
+    "rechnungsnummer": "z. B. R-2026-001",
+    "auftrag": "Welcher Auftrag?",
+    "kunde": "Welcher Kunde?",
+    "nettobetrag": "z. B. 200,00",
+    "mwst_satz": "z. B. 19%, 7%, 0%",
+    "bruttobetrag": "z. B. 238,00",
+    "rechnungsdatum": "Wann wurde die Rechnung erstellt?",
+    "faelligkeitsdatum": "Wann ist die Rechnung fällig?",
+    "status_rechnung": "z. B. Offen, Bezahlt, Überfällig"
+  },
+  "JahresinspektionPlanenDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug inspizieren?",
+    "wunschtermin_inspektion": "Gewünschter Inspektionstermin?",
+    "arbeitsbeschreibung_inspektion": "Welche Inspektionspunkte durchführen?",
+    "bemerkungen_inspektion": "Spezielle Inspektionswünsche oder Notizen..."
+  },
+  "RechnungsPdfErstellenDialog.tsx": {
+    "rechnung": "Welche Rechnung als PDF?",
+    "pdf_rechnungsnummer": "z. B. R-2026-001",
+    "pdf_kunde_vorname": "z. B. Max",
+    "pdf_kunde_nachname": "z. B. Müller",
+    "pdf_nettobetrag": "z. B. 200,00",
+    "pdf_bruttobetrag": "z. B. 238,00"
+  }
+}
