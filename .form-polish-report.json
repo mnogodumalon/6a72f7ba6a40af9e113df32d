@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten — keine Preisfelder, keine Datumspaare, keine applookup-Ketten. Kontaktdaten und Adresse ohne Berechnung."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeug-Stammsatz mit technischen Merkmalen und Kundenreferenz. Kilometer und Baujahr sind Zustände, keine berechenbaren Größen."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["wunschtermin", "status"],
+      "computed_keys": [],
+      "reason": "Arbeitsauftrags-Kopfzeile mit Fahrzeug/Kunde, Beschreibung, Status-Workflow. Keine Preisberechnung auf dieser Ebene — rein deskriptiv."
+    },
+    "Rechnungen": {
+      "placeholders_set": 8,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung"],
+      "computed_keys": ["mwst_betrag", "bruttobetrag"],
+      "reason": "Nettobetrag + MwSt-Satz (Lookup-Conditional) → MwSt-Betrag und Brutto. Zwei computed-Einträge (MODUS 2) berechnen den Steuerbetrag und den Gesamtbetrag aus Netto + Lookup-Satz. Fälligkeitsdatum defaulted auf +14 Tage (typische Zahlungsfrist)."
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektions-Planungs-Form mit Fahrzeug-Auswahl und Terminangabe. Beschreibung und Bemerkungen sind deskriptiv, keine Berechnung."
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Utility-Dialog zum PDF-Generieren — Felder sind Pre-Fill-Kopien aus der Rechnungs-Auswahl (applookup). Keine Berechnung, die Beträge werden gelesen, nicht neu kalkuliert."
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "KundenDialog.tsx": {
+    "vorname": "z. B. Max",
+    "nachname": "z. B. Mustermann",
+    "email": "z. B. max@example.com",
+    "telefon": "z. B. 030-1234567",
+    "strasse": "z. B. Hauptstraße",
+    "hausnummer": "z. B. 42",
+    "plz": "z. B. 10115",
+    "ort": "z. B. Berlin",
+    "bemerkungen_kunde": "Besonderheiten, Rabatte, Zahlungsbedingungen..."
+  },
+  "FahrzeugeDialog.tsx": {
+    "kennzeichen": "z. B. HH-AB-123",
+    "marke": "z. B. Mercedes-Benz",
+    "modell": "z. B. C-Klasse",
+    "baujahr": "z. B. 2022",
+    "fin": "z. B. WBADO123456789",
+    "kilometerstand": "z. B. 45000",
+    "kunde": "Kundenname wählen"
+  },
+  "AuftraegeDialog.tsx": {
+    "fahrzeug": "Fahrzeug auswählen",
+    "kunde": "Kunde auswählen",
+    "arbeitsbeschreibung": "Detaillierte Beschreibung der Arbeiten (Reparatur, Wartung, etc.)...",
+    "wunschtermin": "Wunschtermin eingeben",
+    "status": "Status wählen",
+    "prioritaet": "Priorität auswählen",
+    "bemerkungen_auftrag": "Zusätzliche Anmerkungen, Besonderheiten...",
+    "auftragsnummer": "z. B. AUF-2026-001"
+  },
+  "RechnungenDialog.tsx": {
+    "rechnungsnummer": "z. B. RCH-2026-001",
+    "auftrag": "Auftrag auswählen",
+    "kunde": "Kunde auswählen",
+    "nettobetrag": "z. B. 1500,00",
+    "mwst_satz": "MwSt.-Satz wählen",
+    "bruttobetrag": "Automatisch berechnet",
+    "rechnungsdatum": "Ausstellungsdatum",
+    "faelligkeitsdatum": "Zahlungsfällig am"
+  },
+  "JahresinspektionPlanenDialog.tsx": {
+    "fahrzeug": "Fahrzeug auswählen",
+    "wunschtermin_inspektion": "Inspektionstermin eingeben",
+    "arbeitsbeschreibung_inspektion": "Inspektionsumfang, TÜV/Hauptuntersuchung, etc...",
+    "bemerkungen_inspektion": "Besonderheiten, bekannte Mängel..."
+  },
+  "RechnungsPdfErstellenDialog.tsx": {
+    "rechnung": "Rechnung auswählen",
+    "pdf_rechnungsnummer": "z. B. RCH-2026-001",
+    "pdf_kunde_vorname": "Vorname des Rechnungsempfängers",
+    "pdf_kunde_nachname": "Nachname des Rechnungsempfängers",
+    "pdf_nettobetrag": "z. B. 1500,00",
+    "pdf_bruttobetrag": "z. B. 1785,00"
+  }
+}
