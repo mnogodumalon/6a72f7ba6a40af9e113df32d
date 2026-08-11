@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Name, Kontakt, Adresse). Keine Numerik, keine Datumspaare, keine applookup-Preis-Ziele. Nichts berechenbar."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeugstammdaten (Kennzeichen, Marke, Modell, Baujahr, FIN, Kilometerstand). Applookup auf Kunden hat keine numerischen target_fields. Nichts berechenbar."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["status"],
+      "computed_keys": [],
+      "reason": "Auftragserfassung mit Status (offen/in_bearbeitung/abgeschlossen). Ein Datum (Wunschtermin), kein Datumspaar, keine Preis-Applookup (Fahrzeug-applookup enthält nur baujahr/kilometerstand, keine Preis-Felder). Nichts berechenbar."
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung"],
+      "computed_keys": [],
+      "reason": "Rechnungs-Stamm mit expliziten Netto- und Brutto-Beträgen (manuell eingegeben, nicht berechnet). Datumspair für Ausstellung und Fälligkeit. Keine automatische MwSt/Brutto-Berechnung, da beide Beträge explicit im Backend vorhanden und vom User gepflegt sind."
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektions-Planungsformular mit Fahrzeug-Applookup und einem Datum (Wunschtermin). Kein Datumspair, keine Preis-Applookup. Nichts berechenbar."
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Arbeitsfluss-Form zum Generieren eines PDF aus einer Rechnung. Applookup-Vorbelegungen für Rechnungsnummer, Kundenname, Beträge. Keine Berechnungen — alle Felder sind Eingabevorbelegungen oder manuelle Einträge."
+    }
+  }
+}
