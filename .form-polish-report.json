@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten mit Adress- und Kontaktfeldern, keine berechenbaren Größen"
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeugmetadaten ohne arithmetische oder zeitliche Beziehungen, keine Preis-Komponenten"
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["wunschtermin", "status", "prioritaet"],
+      "computed_keys": [],
+      "reason": "Arbeitsbefehl ohne Mengen-, Stunden- oder Preis-Felder; kein Aggregations-Szenario"
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung"],
+      "computed_keys": ["_mwst_betrag", "bruttobetrag"],
+      "reason": "Netto + MwSt-Satz vorhanden → MWST-Betrag und Brutto automatisch berechnen (Modus 2: Switch auf mwst_satz-Lookup-Key)"
+    },
+    "JahresinspektionPlanen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektions-Planungs-Entity ohne numerische Beziehungen oder Zeitzeitspannen-Paarung"
+    },
+    "RechnungsPdfErstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "PDF-Export-Template mit Metadaten-Feldern, kein arithmetisches Schema"
+    }
+  }
+}
