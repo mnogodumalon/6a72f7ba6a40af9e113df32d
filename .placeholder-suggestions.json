@@ -1,0 +1,52 @@
+{
+  "KundenDialog.tsx": {
+    "vorname": "z. B. Max",
+    "nachname": "z. B. Mustermann",
+    "email": "z. B. max@example.de",
+    "strasse": "z. B. Hauptstraße 10",
+    "hausnummer": "z. B. 10a",
+    "plz": "z. B. 10115",
+    "ort": "z. B. Berlin",
+    "bemerkungen_kunde": "Spezialwünsche, Zahlungshinweise, Rabatte..."
+  },
+  "FahrzeugeDialog.tsx": {
+    "kennzeichen": "z. B. B-AB 1234",
+    "marke": "z. B. BMW",
+    "modell": "z. B. 3er",
+    "baujahr": "z. B. 2020",
+    "fin": "z. B. WBXYZ123456789",
+    "kilometerstand": "z. B. 45000",
+    "kunde": "Welcher Kunde?"
+  },
+  "AuftraegeDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug?",
+    "kunde": "Welcher Kunde?",
+    "arbeitsbeschreibung": "Was ist zu tun? Mängel, Reparaturen, Austausche, Überprüfungen...",
+    "wunschtermin": "Wann sollte es fertig sein?",
+    "bemerkungen_auftrag": "Spezielle Anweisungen, Material, Hinweise...",
+    "auftragsnummer": "z. B. AU-2026-001"
+  },
+  "RechnungenDialog.tsx": {
+    "rechnungsnummer": "z. B. RE-2026-0001",
+    "auftrag": "Welcher Auftrag?",
+    "kunde": "Welcher Kunde?",
+    "nettobetrag": "z. B. 500,00",
+    "bruttobetrag": "wird berechnet",
+    "rechnungsdatum": "Heute wählen",
+    "faelligkeitsdatum": "14 Tage später"
+  },
+  "JahresinspektionPlanenDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug?",
+    "wunschtermin_inspektion": "Wann soll inspiziert werden?",
+    "arbeitsbeschreibung_inspektion": "Hauptpunkte der Inspektion, Schwerpunkte...",
+    "bemerkungen_inspektion": "Zusätzliche Hinweise, Besonderheiten..."
+  },
+  "RechnungsPdfErstellenDialog.tsx": {
+    "rechnung": "Welche Rechnung?",
+    "pdf_rechnungsnummer": "Übernahme aus Rechnung",
+    "pdf_kunde_vorname": "Übernahme aus Rechnung",
+    "pdf_kunde_nachname": "Übernahme aus Rechnung",
+    "pdf_nettobetrag": "Übernahme aus Rechnung",
+    "pdf_bruttobetrag": "Übernahme aus Rechnung"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "pages": {
+    "en": {
+      "Abgeschlossen": "Completed",
+      "Abschließen": "Complete",
+      "Alle Rechnungen bezahlt": "All Invoices Paid",
+      "Als bezahlt markieren": "Mark as Paid",
+      "Auftrag": "Order",
+      "Auftrag in Bearbeitung": "Order in Progress",
+      "Aufträge in Bearbeitung": "Orders in Progress",
+      "Bearbeiten": "Edit",
+      "Bezahlt": "Paid",
+      "Heute {0} Termin{1} — {2}": "Today {0} Appointment{1} — {2}",
+      "Heutige Termine": "Today's Appointments",
+      "In Bearbeitung": "In Progress",
+      "In Bearbeitung setzen": "Set to In Progress",
+      "Keine Termine heute": "No Appointments Today",
+      "Keine Termine heute — ruhiger Tag in der Werkstatt.": "No appointments today — quiet day at the workshop.",
+      "Morgen: {0}": "Tomorrow: {0}",
+      "Neue Rechnung": "New Invoice",
+      "Neuer Auftrag": "New Order",
+      "Offen": "Open",
+      "Offene Forderungen": "Open Receivables",
+      "Rechnung": "Invoice",
+      "Werkstatt im Einsatz": "Workshop in Action",
+      "als bezahlt markiert": "marked as paid",
+      "fällig seit": "due since",
+      "haben überfällige Rechnungen": "have overdue invoices",
+      "hat eine überfällige Rechnung": "has an overdue invoice",
+      "Überfällige & offene Rechnungen": "Overdue & Open Invoices"
+    }
+  },
+  "v": 1
+}

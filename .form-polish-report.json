@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 8,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Vorname, Nachname, Adresse, Email). Keine numerischen Felder mit Beziehungen, keine Datumfelder mit Berechnung sinnvoll. Keine applookup-Ketten zu Preis-Feldern."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Stammdaten mit Technikkennzahlen (Baujahr, Kilometerstand). Keine Berechnung zwischen Zahlfeldern sinnvoll. Kilometerstand ist eine reine Messgröße."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["wunschtermin", "status"],
+      "computed_keys": [],
+      "reason": "Arbeitsverwaltung mit Status-Pipeline (offen → in_bearbeitung → abgeschlossen). Keine Preis/Kosten-Felder — target_numeric_fields von Fahrzeug sind Baujahr/Kilometerstand, keine Preis-Targets. Wunschtermin wird 1 Tag voraus vorbelegung, Status startet als 'offen'."
+    },
+    "Rechnungen": {
+      "placeholders_set": 8,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung", "mwst_satz"],
+      "computed_keys": ["bruttobetrag"],
+      "reason": "Rechnungsentität mit klarer Netto-Brutto-Struktur und MwSt.-Satz-Lookup. Bruttobetrag wird berechnet als: Nettobetrag × (1 + MwSt.-Satz). Der MwSt.-Satz ist ein Lookup mit drei Optionen (19%, 7%, 0%) — daher MODUS 2 mit ctx.lookupKey-Conditional. Rechnungsdatum=heute, Fälligkeitsdatum=heute+14 Tage, Status startet 'offen'."
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektions-Planungs-Dialog mit Fahrzeug-Referenz und Zeitplanung. Keine Kosten/Preis-Felder. Wunschtermin wird 7 Tage voraus vorbelegung (typische Inspektions-Planungs-Vorlaufzeit)."
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "PDF-Generierungs-Dialog mit Read-Only-Feldern (pdf_*) für die Dokumenten-Befüllung. Keine Berechnungen — die Felder werden entweder vom Nutzer manuell eingegeben oder später vom System aus der verlinkten Rechnung abgeleitet. Keine Defaults sinnvoll."
+    }
+  }
+}
