@@ -23,6 +23,9 @@ import JahresinspektionPlanenDetailPage from '@/pages/JahresinspektionPlanenDeta
 import RechnungsPdfErstellenPage from '@/pages/RechnungsPdfErstellenPage';
 import RechnungsPdfErstellenDetailPage from '@/pages/RechnungsPdfErstellenDetailPage';
 // <custom:imports>
+const AuftragAnlegenPage = lazy(() => import('@/pages/intents/AuftragAnlegenPage'));
+const AuftragAbschliessenPage = lazy(() => import('@/pages/intents/AuftragAbschliessenPage'));
+const JahresinspektionPlanenIntentPage = lazy(() => import('@/pages/intents/JahresinspektionPlanenPage'));
 // </custom:imports>
 
 // Lazy: public pages live outside <Layout> and only load on /#/public/:slug —
@@ -70,6 +73,9 @@ export default function App() {
                 <Route path="admin" element={<AdminPage />} />
                 <Route path="verwaltung/oeffentliche-seiten" element={<PublicPagesAdmin />} />
                 {/* <custom:routes> */}
+                <Route path="intents/auftrag-anlegen" element={<Suspense fallback={null}><AuftragAnlegenPage /></Suspense>} />
+                <Route path="intents/auftrag-abschliessen" element={<Suspense fallback={null}><AuftragAbschliessenPage /></Suspense>} />
+                <Route path="intents/jahresinspektion-planen" element={<Suspense fallback={null}><JahresinspektionPlanenIntentPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>
