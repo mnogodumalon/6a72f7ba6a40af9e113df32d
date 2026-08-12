@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity (Name, Adresse, Kontakt) — keine Number-Felder mit Preis-Semantik, keine applookup-Preis-Ziele, nichts berechenbar"
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Stammdaten-Entity für Fahrzeuge (Kennzeichen, Marke, Modell, Baujahr, km) — keine Preis-Felder, keine Berechnung sinnvoll, applookup Kunde hat keine numerischen Zielfelder"
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["wunschtermin", "status"],
+      "computed_keys": [],
+      "reason": "Auftragsformular mit Fahrzeug/Kunde (applookup ohne Preis-Ziele), Termin (today + withTime), Status-Lookup (default: offen) — keine numerischen Berechnungen (keine Arbeitsstunden, keine Material-Kosten-Felder)"
+    },
+    "Rechnungen": {
+      "placeholders_set": 8,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung"],
+      "computed_keys": ["mwst_betrag", "bruttobetrag"],
+      "reason": "Klassische Netto-Brutto-Rechnung mit MwSt-Satz-Lookup (19%, 7%, 0%) — mwst_betrag = netto × satzprozent (MODUS 2 mit ctx.lookupKey), bruttobetrag = netto + mwst — beides berechnet, bruttobetrag schlägt default nicht, rechnungsdatum=heute, faelligkeitsdatum=+14d, status=offen"
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektionsformular mit Fahrzeug (applookup, keine Preise), Termin (today + withTime), Arbeitsbeschreibung/Bemerkungen — reine Daten-Erfassung, keine Berechnungen"
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "PDF-View/Report-Form mit applookup Rechnung und pdf_*-Readonly-Felder (Rechnungsnummer, Kunde-Daten, Beträge als Anzeige) — keine Berechnung, Felder sind View-Only aus dem applookup-Target"
+    }
+  }
+}
