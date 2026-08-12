@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Kundenstammdaten (Name, Kontakt, Adresse). Keine berechenbaren Felder, keine Preise, keine Applookup-Ketten mit numerischen Zielen."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeugstammdaten (Kennzeichen, Marke, Modell, Baujahr, Kilometerstand). Baujahr und Kilometerstand sind reine Dokument-Felder, nicht berechenbar. Applookup zu Kunden dient nur zur Zuordnung, kein Preis-Target."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["wunschtermin", "status"],
+      "computed_keys": [],
+      "reason": "Arbeitsauftrag mit Fahrzeug/Kunde, Beschreibung und Wunschtermin. Status hat klaren Anfangswert (offen). Keine Preisfelder im Form, Applookup-Ziele haben nur Baujahr/Kilometerstand — keine computed-Formeln sinnvoll."
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung"],
+      "computed_keys": ["_mwst_betrag", "bruttobetrag"],
+      "reason": "Rechnungs-Header mit Netto-Brutto-Trennung. MwSt-Satz ist Lookup (19%/7%/0%) — MODUS-2 Funktion mapt Keys zu Prozenten. Zwei berechnete Felder: virtuelle _mwst_betrag (Anzeige) + bruttobetrag (Backend-Feld, aber computed um Netto+MwSt zu addieren). Das zeigt User den korrekten Brutto-Vorschlag im Dialog."
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektions-Planungs-Form (Fahrzeug, Wunschtermin, Beschreibung, Bemerkungen). Nur Wunschtermin als Default (heute). Keine Preise, keine Berechnung."
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Hilfs-Dialog zur PDF-Generierung: Rechnung wählen, Rechnungsnummer und Kundendaten sowie Beträge manuell eingeben. Keine Berechnung, reine Dateneingabe für PDF-Rendering."
+    }
+  }
+}
