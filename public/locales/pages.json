@@ -1,0 +1,29 @@
+{
+  "pages": {
+    "en": {
+      "Abschließen": "Complete",
+      "Alle Aufträge im Plan.": "All orders on schedule.",
+      "Alle Rechnungen bezahlt.": "All invoices paid.",
+      "Als bezahlt markieren": "Mark as Paid",
+      "Bezahlt": "Paid",
+      "Heute": "Today",
+      "Heute & überfällig": "Today & Overdue",
+      "In Bearbeitung": "In Progress",
+      "In Bearbeitung setzen": "Set to In Progress",
+      "Keine Aufträge für heute — alles auf dem neuesten Stand.": "No orders for today — everything up to date.",
+      "Neue Rechnung": "New Invoice",
+      "Neuer Auftrag": "New Order",
+      "Noch keine Aufträge — starte jetzt.": "No orders yet — start now.",
+      "Nächste Inspektion": "Next Inspection",
+      "Offen": "Open",
+      "Offene Rechnungen": "Open Invoices",
+      "Rechnung überfällig": "Invoice Overdue",
+      "Starten": "Start",
+      "fällig": "due",
+      "in Bearbeitung": "In Progress",
+      "keine": "none",
+      "Überfällig": "Overdue"
+    }
+  },
+  "v": 1
+}

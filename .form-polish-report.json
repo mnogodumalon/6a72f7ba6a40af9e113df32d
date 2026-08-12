@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Name, Kontakt, Adresse). Keine Number-Felder mit Berechnungslogik, keine Applookup-Preis-Ketten, keine Datumspaare für Dauer-Berechnungen."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeugstammdaten mit Baujahr und Kilometerstand als reine Eingabefelder. Keine Preisfelder, keine Applookup-Multiplikationen, keine Datums-Differenzen."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["status", "prioritaet", "wunschtermin"],
+      "computed_keys": [],
+      "reason": "Arbeitsverwaltung mit Status/Priorität/Termin-Feldern. Keine Number-Felder für Kosten/Stunden/Menge im Schema, daher keine computed-Formeln notwendig."
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung", "mwst_satz"],
+      "computed_keys": ["_mwst_betrag_berechnet"],
+      "reason": "Brutto-Rechnungs-Entity mit explizitem Nettobetrag + MwSt.-Satz-Lookup (Signale a+b für Brutto-Rechnung). Virtuelle MwSt-Berechnung: (MODUS 2) Nettobetrag × Lookup-abhängiger Satzschalter (19%/7%/0%)."
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektions-Planungs-Stammdaten (Fahrzeug, Wunschtermin, Beschreibung, Bemerkungen). Keine Mengen, Preise oder Datums-Differenzen für automatische Berechnungen."
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Hilfform zur PDF-Generierung mit Präfill-Feldern aus Rechnungs-Applookup (pdf_rechnungsnummer, pdf_kunde_*, pdf_beträge). Keine echten Eingaben, keine Berechnungen."
+    }
+  }
+}

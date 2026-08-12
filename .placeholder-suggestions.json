@@ -1,0 +1,57 @@
+{
+  "KundenDialog.tsx": {
+    "vorname": "z. B. Max",
+    "nachname": "z. B. Müller",
+    "email": "max@example.com",
+    "telefon": "z. B. 030 12345678",
+    "strasse": "z. B. Hauptstraße",
+    "hausnummer": "z. B. 42",
+    "plz": "z. B. 10115",
+    "ort": "z. B. Berlin",
+    "bemerkungen_kunde": "Besondere Wünsche, Notizen..."
+  },
+  "FahrzeugeDialog.tsx": {
+    "kennzeichen": "z. B. B-FR-2845",
+    "marke": "z. B. Volkswagen",
+    "modell": "z. B. Golf",
+    "baujahr": "z. B. 2020",
+    "fin": "z. B. WVWZZZ3CZ...",
+    "kilometerstand": "z. B. 45000",
+    "kunde": "Kundenname wählen"
+  },
+  "AuftraegeDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug betroffen?",
+    "kunde": "Welcher Kunde?",
+    "arbeitsbeschreibung": "Aufzählung aller Arbeiten, Details...",
+    "wunschtermin": "Wann soll die Arbeit stattfinden?",
+    "status": "z. B. Offen, In Bearbeitung",
+    "prioritaet": "z. B. Normal, Hoch, Niedrig",
+    "bemerkungen_auftrag": "Zusätzliche Anmerkungen...",
+    "auftragsnummer": "z. B. AU-2026-0042"
+  },
+  "RechnungenDialog.tsx": {
+    "rechnungsnummer": "z. B. RE-2026-0123",
+    "auftrag": "Welcher Auftrag betroffen?",
+    "kunde": "Welcher Kunde?",
+    "nettobetrag": "z. B. 500,00",
+    "mwst_satz": "z. B. 19%, 7%, 0%",
+    "bruttobetrag": "z. B. 595,00",
+    "rechnungsdatum": "Heute?",
+    "faelligkeitsdatum": "In 14 Tagen?",
+    "status_rechnung": "z. B. Offen, Bezahlt"
+  },
+  "JahresinspektionPlanenDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug inspizieren?",
+    "wunschtermin_inspektion": "Wann soll die Inspektion stattfinden?",
+    "arbeitsbeschreibung_inspektion": "Was soll inspiziert werden?",
+    "bemerkungen_inspektion": "Besondere Hinweise, Vorschäden..."
+  },
+  "RechnungsPdfErstellenDialog.tsx": {
+    "rechnung": "Rechnung auswählen",
+    "pdf_rechnungsnummer": "Wird automatisch befüllt",
+    "pdf_kunde_vorname": "Wird automatisch befüllt",
+    "pdf_kunde_nachname": "Wird automatisch befüllt",
+    "pdf_nettobetrag": "Wird automatisch befüllt",
+    "pdf_bruttobetrag": "Wird automatisch befüllt"
+  }
+}
