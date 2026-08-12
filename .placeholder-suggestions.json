@@ -1,0 +1,56 @@
+{
+  "KundenDialog.tsx": {
+    "vorname": "z. B. Max",
+    "nachname": "z. B. Müller",
+    "email": "z. B. max@example.de",
+    "strasse": "z. B. Hauptstraße",
+    "hausnummer": "z. B. 42a",
+    "plz": "z. B. 10115",
+    "ort": "z. B. Berlin",
+    "bemerkungen_kunde": "Spezielle Wünsche, Hinweise, Besonderheiten..."
+  },
+  "FahrzeugeDialog.tsx": {
+    "kennzeichen": "z. B. B-AB 123",
+    "marke": "z. B. BMW",
+    "modell": "z. B. 3er",
+    "baujahr": "z. B. 2020",
+    "fin": "z. B. WBXYZ1234567890AB",
+    "kilometerstand": "z. B. 45000",
+    "kunde": "Kunde wählen"
+  },
+  "AuftraegeDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug?",
+    "kunde": "Wer ist der Kunde?",
+    "arbeitsbeschreibung": "Was soll repariert oder gewartet werden? Detaillierte Beschreibung der Arbeiten...",
+    "wunschtermin": "Wann soll die Arbeit erledigt sein?",
+    "status": "Status wählen",
+    "prioritaet": "Wie dringend ist die Reparatur?",
+    "bemerkungen_auftrag": "Weitere Hinweise, besondere Wünsche des Kunden...",
+    "auftragsnummer": "z. B. AU-2026-001"
+  },
+  "RechnungenDialog.tsx": {
+    "rechnungsnummer": "z. B. RG-2026-001",
+    "auftrag": "Welcher Auftrag?",
+    "kunde": "Wer ist der Rechnungsempfänger?",
+    "nettobetrag": "z. B. 499,99",
+    "mwst_satz": "Welcher Steuersatz?",
+    "bruttobetrag": "z. B. 594,99",
+    "rechnungsdatum": "Austellungsdatum",
+    "faelligkeitsdatum": "Wann ist die Zahlung fällig?",
+    "status_rechnung": "Zahlungsstatus wählen"
+  },
+  "JahresinspektionPlanenDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug inspizieren?",
+    "wunschtermin_inspektion": "Wann soll inspiziert werden?",
+    "arbeitsbeschreibung_inspektion": "Inspektionspunkte, Überprüfungen...",
+    "bemerkungen_inspektion": "Besonderheiten, Hinweise für den Techniker..."
+  },
+  "RechnungsPdfErstellenDialog.tsx": {
+    "rechnung": "Welche Rechnung exportieren?",
+    "pdf_rechnungsnummer": "z. B. RG-2026-001",
+    "pdf_kunde_vorname": "z. B. Max",
+    "pdf_kunde_nachname": "z. B. Müller",
+    "pdf_nettobetrag": "z. B. 499,99",
+    "pdf_bruttobetrag": "z. B. 594,99"
+  }
+}

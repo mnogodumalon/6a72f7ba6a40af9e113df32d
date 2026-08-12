@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 8,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Kontakt, Adresse, Notizen). Keine numerischen Felder, keine applookups auf Preis-Entitäten, keine Datumsbereiche — nichts berechenbar."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeugtechnische Daten (Baujahr, Kilometerstand) sind reine Input-Felder, keine Berechnungen. Applookup auf Kunden hat keine Preis-Felder."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["wunschtermin", "status"],
+      "computed_keys": [],
+      "reason": "Keine numerischen Preisfelder in diesem Dialog — daher keine Produktformeln oder Aggregationen. Nur Identifier, Fahrzeug/Kunde-Lookups, Datum und Status."
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung", "mwst_satz"],
+      "computed_keys": ["mwst_betrag", "bruttobetrag"],
+      "reason": "Klassische Rechnungs-Konstellation mit Netto-Brutto-Trennung. MwSt-Satz (Lookup mit 19/7/0%) wird auf Nettobetrag angewandt. Beide Berechnungen (mwst_betrag und bruttobetrag) sind verpflichtend, da ein explizites netto- und mwst_satz-Feld vorhanden ist."
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Dialog zur Planung, keine numerischen Felder oder Aggregationen. Fahrzeug-Applookup hat keine Preis-Felder — reine Terminplanung."
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "PDF-Generierungs-Hilfsdialog. Alle Felder sind Text/Numeric-Passthrough aus der Rechnung (keine echten Berechnungen). Der PDF-Generator holt die Werte selbst."
+    }
+  }
+}

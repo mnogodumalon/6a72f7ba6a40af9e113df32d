@@ -1,0 +1,39 @@
+{
+  "pages": {
+    "en": {
+      "Abschließen": "Complete",
+      "Alle Aufträge im grünen Bereich.": "All orders are in good shape.",
+      "Alles im Zeitplan — keine fälligen Aufträge": "All on schedule — no orders due",
+      "Als bezahlt markieren": "Mark as Paid",
+      "Auftrag": "Order",
+      "Bezahlt": "Paid",
+      "Ersten Auftrag erstellen": "Create First Order",
+      "Ersten Kunden anlegen": "Create First Customer",
+      "Fällig & überfällig": "Due & Overdue",
+      "Heute": "Today",
+      "Heute: {0} {1}": "Today: {0} {1}",
+      "In Bearbeitung": "In Progress",
+      "In Bearbeitung setzen": "Set to In Progress",
+      "Keine überfälligen Rechnungen": "No overdue invoices",
+      "Leg den ersten Kunden oder Auftrag an, um loszulegen.": "Create your first customer or order to get started.",
+      "Neue Rechnung": "New Invoice",
+      "Neuer Auftrag": "New Order",
+      "Noch keine Aufträge – lege den ersten an.": "No orders yet – create the first one.",
+      "Offen": "Open",
+      "Offene Rechnungen": "Open Invoices",
+      "Rechnung": "Invoice",
+      "Rechnung {0} {1}": "Invoice {0} {1}",
+      "Rechnungen sind überfällig": "invoices are overdue",
+      "Starten": "Start",
+      "Umsatz bezahlt": "Revenue Paid",
+      "Werkstatt einrichten": "Set Up Workshop",
+      "als bezahlt markiert": "marked as paid",
+      "im Terminbuch": "in the appointment book",
+      "ist überfällig": "is overdue",
+      "warten auf ihre Fahrzeuge": "waiting for their vehicles",
+      "Überfällig": "Overdue",
+      "Überfällige Rechnungen": "Overdue Invoices"
+    }
+  },
+  "v": 1
+}
