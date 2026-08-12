@@ -1,0 +1,56 @@
+{
+  "KundenDialog.tsx": {
+    "vorname": "z. B. Max",
+    "nachname": "z. B. Müller",
+    "email": "max@beispiel.de",
+    "strasse": "z. B. Bahnhofstraße",
+    "hausnummer": "z. B. 42",
+    "plz": "z. B. 12345",
+    "ort": "z. B. Berlin",
+    "bemerkungen_kunde": "Spezielle Wünsche, Notizen..."
+  },
+  "FahrzeugeDialog.tsx": {
+    "kennzeichen": "z. B. BER-AB-123",
+    "marke": "z. B. Volkswagen",
+    "modell": "z. B. Golf",
+    "baujahr": "z. B. 2018",
+    "fin": "z. B. WVWZZZ3CZ...",
+    "kilometerstand": "z. B. 45000",
+    "kunde": "Welcher Kunde?"
+  },
+  "AuftraegeDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug?",
+    "kunde": "Welcher Kunde?",
+    "arbeitsbeschreibung": "Beschreibung der Arbeiten, Reparaturen...",
+    "wunschtermin": "Wann soll die Arbeit stattfinden?",
+    "status": "z. B. Offen, In Bearbeitung",
+    "prioritaet": "z. B. Normal, Hoch",
+    "bemerkungen_auftrag": "Zusätzliche Notizen...",
+    "auftragsnummer": "z. B. AUF-2026-001"
+  },
+  "RechnungenDialog.tsx": {
+    "rechnungsnummer": "z. B. RG-2026-001",
+    "auftrag": "Zu welchem Auftrag?",
+    "kunde": "Welcher Kunde?",
+    "nettobetrag": "z. B. 500,00",
+    "mwst_satz": "z. B. 19 %, 7 %",
+    "bruttobetrag": "z. B. 595,00",
+    "rechnungsdatum": "Wann wurde die Rechnung erstellt?",
+    "faelligkeitsdatum": "Wann ist die Zahlung fällig?",
+    "status_rechnung": "z. B. Offen, Bezahlt"
+  },
+  "JahresinspektionPlanenDialog.tsx": {
+    "fahrzeug": "Welches Fahrzeug?",
+    "wunschtermin_inspektion": "Wann soll die Inspektion stattfinden?",
+    "arbeitsbeschreibung_inspektion": "Umfang der Jahresinspektion...",
+    "bemerkungen_inspektion": "Zusätzliche Hinweise..."
+  },
+  "RechnungsPdfErstellenDialog.tsx": {
+    "rechnung": "Rechnung auswählen",
+    "pdf_rechnungsnummer": "z. B. RG-2026-001",
+    "pdf_kunde_vorname": "z. B. Max",
+    "pdf_kunde_nachname": "z. B. Müller",
+    "pdf_nettobetrag": "z. B. 500,00",
+    "pdf_bruttobetrag": "z. B. 595,00"
+  }
+}

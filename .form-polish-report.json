@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 8,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Name, Kontakt, Adresse). Keine Zahlfelder, keine Lookup-Ketten, keine berechenbaren Größen."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeugdaten mit applookup auf Kunden. Number-Felder (baujahr, km) haben keine Preis-Targets — keine Berechnung sinnvoll."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["status", "wunschtermin"],
+      "computed_keys": [],
+      "reason": "Workflow-Auftrag mit Status-Lookup (offen). Wunschtermin als datetimeminute → today-Default sinnvoll. Keine Zahlfelder, keine Berechnung."
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung", "mwst_satz"],
+      "computed_keys": ["_mwst_betrag", "bruttobetrag"],
+      "reason": "Klare Netto-Brutto-Struktur mit explizitem mwst_satz-Lookup (19%, 7%, 0%) — MODUS 2 mit Lookup-Switch zwingend. bruttobetrag = nettobetrag + (nettobetrag * satzprozent). _mwst_betrag virtueller Key für Aggregat-Anzeige. Rechnungsdatum heute, Fälligkeit +14 Tage üblich."
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Termin-Dialog für Inspektionen. Wunschtermin datetimeminute → today-Default. Applookup auf Fahrzeuge hat keine Preis-Targets. Keine Berechnung sinnvoll."
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Workflow-Dialog zur PDF-Generierung. Applookup auf Rechnungen befüllt die pdf_*-Felder (Prefill aus Ziel). Keine eigenständige Berechnung im Dialog selbst."
+    }
+  }
+}

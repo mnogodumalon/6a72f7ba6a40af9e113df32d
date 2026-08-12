@@ -1,0 +1,31 @@
+{
+  "pages": {
+    "en": {
+      "+ {0} weitere": "+ {0} more",
+      "Alle Aufträge und Rechnungen auf dem neuesten Stand.": "All orders and invoices are up to date.",
+      "Als abgeschlossen markieren": "Mark as Completed",
+      "Als bezahlt markieren": "Mark as Paid",
+      "Anstehende Inspektionen (30 Tage)": "Upcoming Inspections (30 days)",
+      "Auftrag": "Order",
+      "Fahrzeug": "Vehicle",
+      "Heute: {0} — {1} Auftrag/Aufträge geplant": "Today: {0} — {1} Order(s) scheduled",
+      "In Bearbeitung": "In Progress",
+      "In Bearbeitung setzen": "Set to In Progress",
+      "Inspektion": "Inspection",
+      "Inspektion planen": "Schedule Inspection",
+      "Inspektionen (30 Tage)": "Inspections (30 days)",
+      "Keine Inspektionen in den nächsten 30 Tagen geplant.": "No inspections scheduled in the next 30 days.",
+      "Keine überfälligen Rechnungen — alles pünktlich bezahlt.": "No overdue invoices — all paid on time.",
+      "Neue Rechnung": "New Invoice",
+      "Neuer Auftrag": "New Order",
+      "Offen": "Open",
+      "{0} Rechnung/Rechnungen überfällig — Nachfassen erforderlich": "{0} Invoice(s) overdue — follow-up required",
+      "{0} — als bezahlt markiert": "{0} — marked as paid",
+      "Überfällig": "Overdue",
+      "Überfällige Rechnungen": "Overdue Invoices",
+      "— Rechnung überfällig seit": "— Invoice overdue since",
+      "✓ Bezahlt": "✓ Paid"
+    }
+  },
+  "v": 1
+}
