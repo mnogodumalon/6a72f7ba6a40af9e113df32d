@@ -1,0 +1,38 @@
+{
+  "pages": {
+    "en": {
+      "+ {0} weitere": "+ {0} more",
+      "Alle Rechnungen bezahlt — super!": "All invoices paid — great!",
+      "Alles erledigt — super!": "All done — great!",
+      "Als bezahlt markieren": "Mark as paid",
+      "Auftrag → {0}": "Order → {0}",
+      "Aufträge in Bearbeitung": "Orders in Progress",
+      "Fahrzeug": "Vehicle",
+      "Fahrzeuge": "Vehicles",
+      "In Bearbeitung": "In Progress",
+      "Inspektion planen": "Schedule Inspection",
+      "Inspektionen": "Inspections",
+      "Keine Inspektionen geplant": "No inspections scheduled",
+      "Kunde": "Customer",
+      "Neue Rechnung": "New Invoice",
+      "Neuer Auftrag": "New Order",
+      "Nächste Inspektionen": "Upcoming Inspections",
+      "Offen": "Open",
+      "Offene Rechnungen": "Open Invoices",
+      "Ohne Angabe": "Not specified",
+      "Rechnung": "Invoice",
+      "Werkstatt-Manager": "Workshop Manager",
+      "fällig": "due",
+      "warten auf Bearbeitung": "waiting for processing",
+      "wartet auf Bearbeitung": "waiting for processing",
+      "{0} — als bezahlt markiert": "{0} — marked as paid",
+      "Überfällig": "Overdue",
+      "— Rechnung überfällig seit": "— Invoice overdue since",
+      "→ In Bearbeitung": "→ In Progress",
+      "✓ Abschließen": "✓ Complete",
+      "✓ Als bezahlt markieren": "✓ Mark as paid",
+      "✓ Bezahlt": "✓ Paid"
+    }
+  },
+  "v": 1
+}

@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Vorname, Nachname, E-Mail, Telefon, Adresse, Bemerkungen). Keine Preise, keine Applookup-Ketten, keine berechenbaren Felder."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": ["baujahr", "kilometerstand"],
+      "computed_keys": [],
+      "reason": "Fahrzeugstammdaten mit Number-Feldern (Baujahr, Kilometerstand). Keine berechenbare Relation zwischen Feldern. Defaults setzen realistische Startwerte (Baujahr 2024, km 0)."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["wunschtermin", "status", "prioritaet"],
+      "computed_keys": [],
+      "reason": "Auftragsformular mit Applookups (Fahrzeug, Kunde) und neuen Lookup-Feldern (Status, Priorität). Keine numerischen Relationen. Defaults: heute mit Uhrzeit für Wunschtermin, Status 'Offen', Priorität 'Normal' als typische Anfangszustände."
+    },
+    "JahresinspektionPlanen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektionsplanungsformular ohne numerische Felder. Applookup auf Fahrzeuge. Default: Wunschtermin auf +7 Tage mit Uhrzeit (typische Planungsvorlaufzeit)."
+    },
+    "Rechnungen": {
+      "placeholders_set": 8,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "mwst_satz", "status_rechnung"],
+      "computed_keys": ["mwst_betrag", "bruttobetrag"],
+      "reason": "Klassische Rechnungs-Entity mit expliziter Netto-Brutto-Trennung und MwSt-Satz-Lookup (19%/7%/0%). MODUS-2 Computed: mwst_betrag wird vom Lookup abhängig berechnet (satzKey → 0.19/0.07/0), bruttobetrag = netto * (1 + rate). Defaults: Rechnungsdatum=heute, Fälligkeitsdatum=heute+14d, Status=Offen, MwSt=19% als Standard."
+    },
+    "RechnungsPdfErstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Rechnungs-PDF-Generierungsformular mit Applookup auf Rechnungen und vorausgefüllten Anzeige-/Übergabe-Feldern (pdf_rechnungsnummer, pdf_kunde_vorname/nachname, pdf_nettobetrag, pdf_bruttobetrag). Keine Berechnungen; Werte kommen aus der Quelle. Keine Defaults nötig."
+    }
+  }
+}
