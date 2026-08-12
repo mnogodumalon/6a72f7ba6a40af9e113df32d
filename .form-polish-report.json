@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Name, Adresse, Kontakt) — keine Datumspaare, keine Preisfelder, keine numerischen Beziehungen, daher keine computed-Formeln sinnvoll"
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeugstammdaten (Kennzeichen, Marke, Modell, Baujahr, Kilometerstand) mit applookup auf Kunden ohne Preis-Target — keine berechnenbaren Werte"
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["wunschtermin", "status"],
+      "computed_keys": [],
+      "reason": "Schnittstelle zwischen Fahrzeugen/Kunden und Rechnungen — zwei applookups ohne Preis-Target, kein Preis-Feld, daher keine Kostenberechnung möglich"
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung"],
+      "computed_keys": ["bruttobetrag"],
+      "reason": "Klassische Brutto-Netto-Rechnung mit Steuersatz-Lookup (19%, 7%, 0%) — Bruttobetrag = Nettobetrag × (1 + Satz), daher MODUS-2 computed mit Switch über MwSt.-Schlüssel"
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Planungs-Form mit applookup auf Fahrzeuge (ohne Preis-Target) — keine berechnenbaren Felder, reine Qualitäts-Textinputs"
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Intent-Dialog für PDF-Export — Felder werden aus Rechnung geprefilled, keine echte Benutzereingabe oder Berechnung erwartet"
+    }
+  }
+}
