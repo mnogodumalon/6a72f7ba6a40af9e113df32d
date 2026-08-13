@@ -1,0 +1,32 @@
+{
+  "pages": {
+    "en": {
+      "Abschließen": "Complete",
+      "Alle Aufträge erledigt — Werkstatt bereit.": "All orders completed — workshop ready.",
+      "Alle Rechnungen bezahlt.": "All invoices paid.",
+      "Als bezahlt markieren": "Mark as Paid",
+      "Auftrag abschließen": "Complete Order",
+      "Bezahlt": "Paid",
+      "Heute": "Today",
+      "Heute {0} Aufträge mit Wunschtermin.": "Today {0} orders with requested date.",
+      "In Bearbeitung": "In Progress",
+      "In Bearbeitung setzen": "Set to In Progress",
+      "Inspektionen (30 Tage)": "Inspections (30 days)",
+      "Keine überfälligen Aufträge — alles im Zeitplan.": "No overdue orders — everything on schedule.",
+      "Neue Rechnung": "New Invoice",
+      "Neuer Auftrag": "New Order",
+      "Nächste Inspektion: {0} am {1}": "Next Inspection: {0} on {1}",
+      "Offen": "Open",
+      "Offene Rechnungen": "Open Invoices",
+      "Status aktualisiert": "Status updated",
+      "{0} offene Aufträge in Bearbeitung.": "{0} open orders in progress.",
+      "{0} — Status aktualisiert": "{0} — Status updated",
+      "{0} — Wunschtermin überschritten.": "{0} — Requested date overdue.",
+      "{0} — als bezahlt markiert": "{0} — marked as paid",
+      "Überfällig": "Overdue",
+      "Überfällig & Heute": "Overdue & Today",
+      "— Wunschtermin überschritten. Bitte priorisieren.": "— Requested date overdue. Please prioritize."
+    }
+  },
+  "v": 1
+}

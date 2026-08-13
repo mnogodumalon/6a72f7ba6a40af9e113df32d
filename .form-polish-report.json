@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 8,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Kundenstammdaten (Name, Adresse, Kontakt). Keine berechenbaren Felder, keine Datums-Paare, keine applookup-Ketten mit Preisen."
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Fahrzeugstammdaten (Kennzeichen, Marke, Modell, Baujahr, FIN, km-Stand). Keine numerischen Produktkalkulationen möglich. Applookup auf Kunden ohne Preis-Target."
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["status"],
+      "computed_keys": [],
+      "reason": "Auftragsverwaltung mit Status-Lookup (offen als Default), Priorität und Termine. Keine Kostenfelder, keine Mengen-Produkte, keine Datenpaare mit Berechnung."
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "mwst_satz", "status_rechnung"],
+      "computed_keys": ["mwst_betrag", "bruttobetrag"],
+      "reason": "Netto-Brutto-Rechnung mit explizitem mwst_satz-Lookup (19%/7%/0%). MwSt-Betrag und Brutto berechnet aus Netto × Satz (Modus 2 mit Lookup-Key-Switch). Status und Datumsfelder mit sinnvollen Defaults (heute + 14 Tage Zahlungsfrist)."
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektionsplanung: Fahrzeug-Lookup + Wunschtermin (Default +7 Tage mit Zeit) + Beschreibung/Bemerkungen. Keine numerischen Felder außer ID-Referenzen."
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Hilfsdialog zum PDF-Generieren einer bestehenden Rechnung (read-only Anzeige von Rechnungsdaten). Keine Berechnungen – die Rechnung existiert bereits mit ihren Beträgen."
+    }
+  }
+}
