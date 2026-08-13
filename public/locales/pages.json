@@ -1,0 +1,40 @@
+{
+  "pages": {
+    "en": {
+      "Abschließen": "Complete",
+      "Alle Rechnungen bezahlt — keine offenen Posten.": "All invoices paid — no open items.",
+      "Alles im grünen Bereich — keine dringenden Aufgaben.": "All clear — no urgent tasks.",
+      "Als bezahlt markieren": "Mark as Paid",
+      "Anstehende Inspektionen": "Upcoming Inspections",
+      "Auftrag": "Order",
+      "Bezahlt": "Paid",
+      "Ersten Kunden anlegen": "Add First Customer",
+      "Fahrzeug": "Vehicle",
+      "Fahrzeuge": "Vehicles",
+      "In Bearbeitung": "In Progress",
+      "In Bearbeitung setzen": "Set to In Progress",
+      "Inspektion planen": "Schedule Inspection",
+      "Inspektionen": "Inspections",
+      "Keine anstehenden Inspektionen.": "No upcoming inspections.",
+      "Kunde": "Customer",
+      "Lege deinen ersten Kunden an — dann kannst du Fahrzeuge, Aufträge und Rechnungen verwalten.": "Add your first customer — then you can manage vehicles, orders, and invoices.",
+      "Neue Rechnung": "New Invoice",
+      "Neuer Auftrag": "New Order",
+      "Offen": "Open",
+      "Offene Rechnungen": "Open Invoices",
+      "Rechnung": "Invoice",
+      "Werkstatt einrichten": "Set Up Workshop",
+      "fällig": "due",
+      "{0} aktuell in der Werkstatt.": "{0} currently in the workshop.",
+      "{0} mit hoher Priorität — heute im Blick behalten.": "{0} high priority — keep an eye on today.",
+      "{0} offene Aufträge warten auf die Zuteilung.": "{0} open orders waiting for assignment.",
+      "{0} — abgeschlossen": "{0} — Completed",
+      "{0} — als bezahlt markiert": "{0} — Marked as Paid",
+      "{0} — in Bearbeitung": "{0} — In Progress",
+      "Überfällige & offene Rechnungen": "Overdue & Open Invoices",
+      "— Rechnung überfällig seit {0}.": "— Invoice overdue since {0}.",
+      "— {0} Rechnungen überfällig.": "— {0} invoices overdue."
+    }
+  },
+  "v": 1
+}

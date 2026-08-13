@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 9,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity (Name, Adresse, Kontakt) — keine Aggregation, keine Daten-Paare, nichts berechenbar"
+    },
+    "Fahrzeuge": {
+      "placeholders_set": 7,
+      "defaults_keys": ["kilometerstand"],
+      "computed_keys": [],
+      "reason": "Fahrzeug-Stammdaten mit numerischen Feldern (Baujahr, KM) — keine Preis-/Satz-Felder, kein Lookup mit Target-Preis, nicht berechenbar"
+    },
+    "Aufträge": {
+      "placeholders_set": 8,
+      "defaults_keys": ["status", "prioritaet", "wunschtermin"],
+      "computed_keys": [],
+      "reason": "Auftragsmanagement mit Terminen und Status — keine Preisfelder im Schema, keine Mengen, Kosten-Berechnung würde ein number-Feld voraussetzen"
+    },
+    "Rechnungen": {
+      "placeholders_set": 9,
+      "defaults_keys": ["rechnungsdatum", "faelligkeitsdatum", "status_rechnung"],
+      "computed_keys": ["_mwst_betrag", "bruttobetrag"],
+      "reason": "Rechnungs-Entity mit Netto-/Brutto-Trennung und MwSt-Satz-Lookup: Brutto = Netto × (1 + Steuersatz), MwSt-Betrag = Netto × Steuersatz. Beide berechnet aus Lookup-abhängigem Steuersatz (0%, 7%, 19%)"
+    },
+    "Jahresinspektion planen": {
+      "placeholders_set": 4,
+      "defaults_keys": ["wunschtermin_inspektion"],
+      "computed_keys": [],
+      "reason": "Inspektions-Planungsform mit Fahrzeug-Applookup und Terminen — keine Preise, keine Mengen, reine Terminverwaltung"
+    },
+    "Rechnungs-PDF erstellen": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "PDF-Template-Helper mit Applookup auf Rechnungen — Feld-Befüllung aus Target ist Dialog-Logik, nicht computed im Form-Polish-Sinne (keine arithmetischen Beziehungen)"
+    }
+  }
+}
